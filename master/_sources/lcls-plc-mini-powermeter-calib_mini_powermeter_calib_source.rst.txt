@@ -1,0 +1,33 @@
+
+
+DUTs
+----
+
+
+GVLs
+----
+
+
+POUs
+----
+
+
+MAIN
+^^^^
+
+::
+
+    PROGRAM MAIN
+    VAR
+        {attribute 'pytmc' := '
+            pv: TST:WFS:SPM
+            io: i
+        '}
+        fb_pm: FB_PPM_PowerMeter;
+    END_VAR
+    fb_pm();
+
+    END_PROGRAM
+
+
+

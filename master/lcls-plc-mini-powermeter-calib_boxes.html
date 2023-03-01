@@ -1,0 +1,692 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boxes &mdash; pcdshub/lcls-plc-mini-powermeter-calib  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/tree.css?v=837a00b9" />
+      <link rel="stylesheet" type="text/css" href="_static/width.css?v=ab210c7a" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Links" href="lcls-plc-mini-powermeter-calib_links.html" />
+    <link rel="prev" title="EtherCAT Terminals" href="lcls-plc-mini-powermeter-calib_ethercat.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pcdshub/lcls-plc-mini-powermeter-calib
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">lcls-plc-mini-powermeter-calib</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-mini-powermeter-calib_pragmas.html">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-mini-powermeter-calib_nc.html">NC Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-mini-powermeter-calib_ethercat.html">EtherCAT Terminals</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Boxes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#term-1-ek1200">Term 1 (EK1200)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#term-2-el6695">Term 2 (EL6695)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#term-3-ek1110">Term 3 (EK1110)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#term-4-ek1100">Term 4 (EK1100)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#term-5-el3062">Term 5 (EL3062)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#term-6-ek1110">Term 6 (EK1110)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-mini-powermeter-calib_links.html">Links</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">mini_powermeter_calib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-mini-powermeter-calib_mini_powermeter_calib_summary.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-mini-powermeter-calib_mini_powermeter_calib_summary.html#pragmas">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-mini-powermeter-calib_mini_powermeter_calib_summary.html#libraries">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-mini-powermeter-calib_mini_powermeter_calib_summary.html#symbols">Symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-mini-powermeter-calib_mini_powermeter_calib_epics.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-mini-powermeter-calib_mini_powermeter_calib_epics.html#database-records">Database Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-mini-powermeter-calib_mini_powermeter_calib_source.html">DUTs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-mini-powermeter-calib_mini_powermeter_calib_source.html#gvls">GVLs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-mini-powermeter-calib_mini_powermeter_calib_source.html#pous">POUs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pcdshub/lcls-plc-mini-powermeter-calib</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Boxes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/lcls-plc-mini-powermeter-calib_boxes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="boxes">
+<h1>Boxes<a class="headerlink" href="#boxes" title="Link to this heading"></a></h1>
+<section id="term-1-ek1200">
+<h2>Term 1 (EK1200)<a class="headerlink" href="#term-1-ek1200" title="Link to this heading"></a></h2>
+<details>
+     <summary>EtherCAT</summary><table class="docutils align-center" id="id1">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>Term 1 (EK1200)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</details></section>
+<section id="term-2-el6695">
+<h2>Term 2 (EL6695)<a class="headerlink" href="#term-2-el6695" title="Link to this heading"></a></h2>
+<details>
+     <summary>EtherCAT (6 PDOs)</summary><table class="docutils align-center" id="id2">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>Term 2 (EL6695)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>BootStrapData</p></td>
+<td><p>0010140200141402</p></td>
+</tr>
+<tr class="row-odd"><td><p>SyncMan</p></td>
+<td><p>0010000426000100010000008000da050004001026010000</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>0016000422000100020000008000da050004001622010000</p></td>
+</tr>
+<tr class="row-odd"><td><p>SyncMan</p></td>
+<td><p>001c00006400000003000000000000000000001c64010000</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>008e02002000010004000000000000000200008e20010000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fmmu</p></td>
+<td><p>0000000000000000000000020000000001000000000000000000000000000000</p></td>
+</tr>
+<tr class="row-even"><td><p>Fmmu</p></td>
+<td><p>0000000000000000008e00010100000002000000000000000000000000000000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fmmu</p></td>
+<td><p>00000000000000000d0800010100000003000000000000000000000000000000</p></td>
+</tr>
+<tr class="row-even"><td><p>CoeProfile</p></td>
+<td><p>5001</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO SYNC Inputs (Index #x1a01, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>None</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..11] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>TxPDO toggle</p></td>
+<td><p>Bit toggles when new data from other side received</p></td>
+<td></td>
+<td><p>#x1801</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>TxPDO state</p></td>
+<td><p>0: Other side is in OP state &gt;0: Error</p></td>
+<td></td>
+<td><p>#x1801</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>None</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>External device not connected</p></td>
+<td><p>0: External device connected 1: External device not connected</p></td>
+<td></td>
+<td><p>#x10f4</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO SYNC Inputs (Index #x1a02, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Sync Mode</p></td>
+<td><p>0: no Syncronisation 1: Secondary side is Sync Master 2: Primary side is Sync Master</p></td>
+<td></td>
+<td><p>#x10f4</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>None</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..9] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>TxPDO toggle</p></td>
+<td><p>Bit toggles when new data from other side received</p></td>
+<td></td>
+<td><p>#x1802</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>TxPDO state</p></td>
+<td><p>0: Other side is in OP state &gt;0: Error</p></td>
+<td></td>
+<td><p>#x1802</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Timestamp update toggle</p></td>
+<td><p>Bit toggles when new timestamp data available</p></td>
+<td></td>
+<td><p>#x10f4</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>External device not connected</p></td>
+<td><p>0: External device connected 1: External device not connected</p></td>
+<td></td>
+<td><p>#x10f4</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Internal time stamp</p></td>
+<td></td>
+<td></td>
+<td><p>#x10f4</p></td>
+<td><p>ULINT</p></td>
+</tr>
+<tr class="row-odd"><td><p>External time stamp</p></td>
+<td></td>
+<td></td>
+<td><p>#x10f4</p></td>
+<td><p>ULINT</p></td>
+</tr>
+<tr class="row-even"><td><p>None</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>UDINT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO SYNC Inputs (Index #x1a03, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Sync Mode</p></td>
+<td><p>0: no Syncronisation 1: Secondary side is Sync Master 2: Primary side is Sync Master</p></td>
+<td></td>
+<td><p>#x10f4</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>None</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..9] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>TxPDO toggle</p></td>
+<td><p>Bit toggles when new data from other side received</p></td>
+<td></td>
+<td><p>#x1803</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>TxPDO state</p></td>
+<td><p>0: Other side is in OP state &gt;0: Error</p></td>
+<td></td>
+<td><p>#x1803</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Timestamp update toggle</p></td>
+<td><p>Bit toggles when new timestamp data available</p></td>
+<td></td>
+<td><p>#x10f4</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>External device not connected</p></td>
+<td><p>0: External device connected 1: External device not connected</p></td>
+<td></td>
+<td><p>#x10f4</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Internal time stamp</p></td>
+<td></td>
+<td></td>
+<td><p>#x10f4</p></td>
+<td><p>UDINT</p></td>
+</tr>
+<tr class="row-odd"><td><p>External time stamp</p></td>
+<td></td>
+<td></td>
+<td><p>#x10f4</p></td>
+<td><p>UDINT</p></td>
+</tr>
+<tr class="row-even"><td><p>None</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>UDINT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO FOE Info (Index #x1a05, Flags #x0020, SyncMan )</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Data Bytes Pending</p></td>
+<td></td>
+<td></td>
+<td><p>#xf650</p></td>
+<td><p>UINT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO IO Inputs (Index #x1a08, Flags #x0020, SyncMan 3)</p>
+<p>PDO IO Outputs (Index #x1608, Flags #x0020, SyncMan 2)</p>
+</details></section>
+<section id="term-3-ek1110">
+<h2>Term 3 (EK1110)<a class="headerlink" href="#term-3-ek1110" title="Link to this heading"></a></h2>
+<details>
+     <summary>EtherCAT</summary><table class="docutils align-center" id="id3">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id3" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>Term 3 (EK1110)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+</details></section>
+<section id="term-4-ek1100">
+<h2>Term 4 (EK1100)<a class="headerlink" href="#term-4-ek1100" title="Link to this heading"></a></h2>
+<details>
+     <summary>EtherCAT</summary><table class="docutils align-center" id="id4">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>Term 4 (EK1100)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>4</p></td>
+</tr>
+</tbody>
+</table>
+</details></section>
+<section id="term-5-el3062">
+<h2>Term 5 (EL3062)<a class="headerlink" href="#term-5-el3062" title="Link to this heading"></a></h2>
+<details>
+     <summary>EtherCAT (4 PDOs)</summary><table class="docutils align-center" id="id5">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id5" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>Term 5 (EL3062)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>BootStrapData</p></td>
+<td><p>0010f400f410f400</p></td>
+</tr>
+<tr class="row-odd"><td><p>SyncMan</p></td>
+<td><p>001080002600010001000000800080008000001026010000</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>801080002200010002000000800080008000801022010000</p></td>
+</tr>
+<tr class="row-odd"><td><p>SyncMan</p></td>
+<td><p>001100000400000003000000000000000000001104000000</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>801108002000010004000000000000000800801120010000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fmmu</p></td>
+<td><p>0000000000000000801100010100000002000000000000000000000000000000</p></td>
+</tr>
+<tr class="row-even"><td><p>Fmmu</p></td>
+<td><p>00000000000000000d0800010100000003000000000000000000000000000000</p></td>
+</tr>
+<tr class="row-odd"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+<tr class="row-even"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 1 (Index #x1a00, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id7"><span class="problematic" id="id8">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id7"><span class="problematic" id="id9">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 1 (Index #x1a01, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 2 (Index #x1a02, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id7"><span class="problematic" id="id10">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id7"><span class="problematic" id="id11">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 2 (Index #x1a03, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+</details></section>
+<section id="term-6-ek1110">
+<h2>Term 6 (EK1110)<a class="headerlink" href="#term-6-ek1110" title="Link to this heading"></a></h2>
+<details>
+     <summary>EtherCAT</summary><table class="docutils align-center" id="id6">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id6" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>Term 6 (EK1110)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>6</p></td>
+</tr>
+</tbody>
+</table>
+</details></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="lcls-plc-mini-powermeter-calib_ethercat.html" class="btn btn-neutral float-left" title="EtherCAT Terminals" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="lcls-plc-mini-powermeter-calib_links.html" class="btn btn-neutral float-right" title="Links" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, SLAC National Accelerator Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

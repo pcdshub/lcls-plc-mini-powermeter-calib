@@ -1,0 +1,30 @@
+lcls-plc-mini-powermeter-calib
+------------------------------
+
+.. toctree::
+    :maxdepth: 2
+    :caption: lcls-plc-mini-powermeter-calib
+
+    lcls-plc-mini-powermeter-calib_pragmas
+    lcls-plc-mini-powermeter-calib_nc
+    lcls-plc-mini-powermeter-calib_ethercat
+    lcls-plc-mini-powermeter-calib_boxes
+    lcls-plc-mini-powermeter-calib_links
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: mini_powermeter_calib
+
+    lcls-plc-mini-powermeter-calib_mini_powermeter_calib_summary
+    lcls-plc-mini-powermeter-calib_mini_powermeter_calib_epics
+    lcls-plc-mini-powermeter-calib_mini_powermeter_calib_source
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
