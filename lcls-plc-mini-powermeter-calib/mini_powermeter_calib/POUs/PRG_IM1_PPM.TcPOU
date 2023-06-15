@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="PRG_IM1_PPM" Id="{7b6ae58f-9505-069f-28e2-2e60bc9fbef1}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_IM1_PPM
+VAR
+    {attribute 'pytmc' := '
+        pv: IM1TST:PPM
+        io: io
+    '}
+    {attribute 'TcLinkTo' := '.fbGige.iIlluminatorINT := TIIB[IM1-EL4004]^AO Outputs Channel 1^Analog output;
+                              .fbGige.bGigePower := TIIB[IM1-EL2004]^Channel 2^Output;
+                              .fbPowerMeter.iVoltageINT := TIIB[IM1-EL3062]^AI Standard Channel 1^Value;
+                              .fbPowerMeter.fbThermoCouple.bError := TIIB[IM1-EL3314]^TC Inputs Channel 1^Status^Error;
+                              .fbPowerMeter.fbThermoCouple.bUnderrange := TIIB[IM1-EL3314]^TC Inputs Channel 1^Status^Underrange;
+                              .fbPowerMeter.fbThermoCouple.bOverrange := TIIB[IM1-EL3314]^TC Inputs Channel 1^Status^Overrange;
+                              .fbPowerMeter.fbThermoCouple.iRaw := TIIB[IM1-EL3314]^TC Inputs Channel 1^Value;
+                              .fbYagThermoCouple.bError := TIIB[IM1-EL3314]^TC Inputs Channel 2^Status^Error;
+                              .fbYagThermoCouple.bUnderrange := TIIB[IM1-EL3314]^TC Inputs Channel 2^Status^Underrange;
+                              .fbYagThermoCouple.bOverrange := TIIB[IM1-EL3314]^TC Inputs Channel 2^Status^Overrange;
+                              .fbYagThermoCouple.iRaw := TIIB[IM1-EL3314]^TC Inputs Channel 2^Value'}
+    fbIM1: FB_PPM;
+
+    bInit: BOOL := TRUE;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+IF bInit THEN
+    fbIM1.nTransitionAssertionID := 16#2110;
+    fbIM1.nUnknownAssertionID := 16#2119;
+
+    fbIM1.stOut.fPosition := -11;
+    fbIM1.stOut.bUseRawCounts := FALSE;
+    fbIM1.stOut.nRequestAssertionID := 16#2111;
+    fbIM1.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+    fbIM1.stOut.bValid := TRUE;
+
+    fbIM1.stPower.fPosition := -47.59;
+    fbIM1.stPower.bUseRawCounts := FALSE;
+    fbIM1.stPower.nRequestAssertionID := 16#2112;
+    fbIM1.stPower.stBeamParams := PMPS_GVL.cstFullBeam;
+    // For now, leave this restriction out (doesn't even take beam yet)
+    // fbIM1.stPower.stBeamParams := F_eVExcludeRange(1, 5000);
+    fbIM1.stPower.bValid := TRUE;
+
+    fbIM1.stYag1.fPosition := -71.69;
+    fbIM1.stYag1.bUseRawCounts := FALSE;
+    fbIM1.stYag1.nRequestAssertionID := 16#2113;
+    fbIM1.stYag1.stBeamParams := PMPS_GVL.cstFullBeam;
+    // For now, do not have restrictions on this YAG. Eventually we want to add exclusion ranges where we need to limit transmission to 0.1 (10%) within those ranges. Currently we do not have transmission control via PMPS on LFE.
+    // fbIM1.stYag1.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
+    fbIM1.stYag1.bValid := TRUE;
+
+    fbIM1.stYag2.fPosition := -97.70;
+    fbIM1.stYag2.bUseRawCounts := FALSE;
+    fbIM1.stYag2.nRequestAssertionID := 16#2114;
+    fbIM1.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
+    // For now, do not have restrictions on this YAG. Eventually we want to add exclusion ranges where we need to limit transmission to 0.1 (10%) within those ranges. Currently we do not have transmission control via PMPS on LFE.
+    // fbIM1.stYag2.stBeamParams.neVRange := F_eVExcludeRange(2100, 3800) AND F_eVExcludeRange(16900, 24000);
+    fbIM1.stYag2.bValid := TRUE;
+
+    bInit := FALSE;
+END_IF
+
+fbIM1(
+    fbArbiter := GVL.fbArbiter,
+    fbFFHWO := GVL.fbFastFaultOutput1,
+    stYStage := Main.M1);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="Main" Id="{2c781f38-26c0-41d7-97db-1bc5263d0d16}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+    {attribute 'pytmc' := 'pv: IM1TST:PPM:MMS'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[IM1-EL7041]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable := TIIB[IM1-EL7041]^STM Status^Status^Digital input 2;
+                              .bBrakeRelease        := TIIB[IM1-EL2004]^Channel 1^Output'}
+    M1: DUT_MotionStage := (sName := 'IM1TST:PPM:MMS');
+    {attribute 'pytmc' := 'pv: IM2TST:PPM:MMS'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[IM2-EL7041]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable := TIIB[IM2-EL7041]^STM Status^Status^Digital input 2;
+                              .bBrakeRelease        := TIIB[IM2-EL2004]^Channel 1^Output'}
+    M2: DUT_MotionStage := (sName := 'IM2TST:PPM:MMS');
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
